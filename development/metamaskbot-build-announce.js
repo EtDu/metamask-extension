@@ -27,19 +27,13 @@ async function start () {
   const FIREFOX = `${BUILD_LINK_BASE}/builds/metamask-firefox-${VERSION}.zip`
   const EDGE = `${BUILD_LINK_BASE}/builds/metamask-edge-${VERSION}.zip`
   const OPERA = `${BUILD_LINK_BASE}/builds/metamask-opera-${VERSION}.zip`
-  const WALKTHROUGH = `${BUILD_LINK_BASE}/test-artifacts/screens/walkthrough%20%28en%29.gif`
 
   const commentBody = `
-  <details>
-    <summary>
-      Builds ready [${SHORT_SHA1}]:
-      <a href="${CHROME}">chrome</a>,
-      <a href="${FIREFOX}">firefox</a>,
-      <a href="${EDGE}">edge</a>,
-      <a href="${OPERA}">opera</a>
-    </summary>
-    <image src="${WALKTHROUGH}">
-  </details>
+    Builds ready [${SHORT_SHA1}]:
+    <a href="${CHROME}">chrome</a>,
+    <a href="${FIREFOX}">firefox</a>,
+    <a href="${EDGE}">edge</a>,
+    <a href="${OPERA}">opera</a>
   `
 
   const JSON_PAYLOAD = JSON.stringify({ body: commentBody })
